@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#ef312f">
+  <meta name="description" content="Recetas MIGA: ideas fáciles, rápidas y realistas para cocinar mejor cada día.">
+  <title>Recetas fáciles — MIGA</title><link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="recipes">
+  <a class="skip-link" href="#main-content">Saltar al contenido</a>
+  <header class="site-header"><div class="header-inner container">
+    <a class="brand" href="index.html" aria-label="MIGA, volver al inicio"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 56 64"><path d="M31 3c4 12-2 15 6 21 4 3 7-2 7-7 8 7 11 17 9 27-2 12-12 18-25 18S4 55 3 43c-1-10 4-19 13-26-1 8 2 10 5 8 7-5 3-14 10-22Z" fill="currentColor"/><path d="M28 32c6 7 10 12 8 18-1 4-4 7-9 7-6 0-10-4-10-10 0-5 4-9 11-15Z" fill="#fff4dc"/></svg></span><span>MIGA</span></a>
+    <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
+    <nav class="main-nav" id="main-nav" aria-label="Navegación principal"><a class="nav-link" href="index.html">Inicio</a><a class="nav-link active" href="recetas.html">Recetas</a><a class="nav-link" href="cursos.html">Cursos</a><a class="nav-link" href="comunidad.html">Comunidad</a><a class="nav-link" href="mapa.html">Mapa</a><a class="nav-link" href="perfil.html">Perfil</a></nav>
+    <a class="button button-primary header-cta" href="#subir" data-open-upload><span aria-hidden="true">＋</span> Subir receta</a>
+  </div></header>
+
+  <main class="page-main" id="main-content">
+    <section class="page-hero"><div class="container page-hero-grid"><div class="reveal"><span class="section-tag">Recetas sin drama</span><h1>Tu próxima comida empieza con una idea fácil</h1><p>Recetas probadas, explicadas paso a paso y pensadas para cocinas reales, presupuestos reales y días con poco tiempo.</p></div><div class="page-hero-panel reveal"><span class="panel-emoji" aria-hidden="true">🍝</span><strong>14 recetas</strong><span>y las que comparte la comunidad</span></div></div></section>
+    <section class="recipes-section section page-section" id="recetas"><div class="container">
+      <div class="section-heading reveal"><div><span class="section-tag">Elige a tu manera</span><h2>¿Qué cocinamos hoy?</h2><p>Busca por nombre o ingrediente y usa los filtros para encontrar justo lo que necesitas.</p></div><a class="button button-primary" href="#subir" data-open-upload>＋ Compartir receta</a></div>
+      <div class="recipe-tools reveal">
+        <label class="search-box" for="recipe-search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m16.2 16.2 4 4"/></svg><input id="recipe-search" type="search" placeholder="Busca por receta o ingrediente..." autocomplete="off"></label>
+        <div class="filter-list" role="group" aria-label="Filtrar recetas por categoría"><button class="filter-chip active" type="button" data-category="Todas">Todas</button><button class="filter-chip" type="button" data-category="Rápidas">⚡ Rápidas</button><button class="filter-chip" type="button" data-category="Económicas">€ Económicas</button><button class="filter-chip" type="button" data-category="Saludables">🥬 Saludables</button><button class="filter-chip" type="button" data-category="Vegetarianas">Vegetarianas</button><button class="filter-chip" type="button" data-category="Postres">🍰 Postres</button><button class="filter-chip" type="button" data-category="Para principiantes">Primeros pasos</button></div>
+      </div>
+      <div class="recipe-grid" id="recipe-grid" aria-live="polite"></div>
+      <div class="empty-state" id="recipe-empty" hidden><span aria-hidden="true">🥄</span><h3>No hemos encontrado esa receta</h3><p>Prueba con otro ingrediente o quita algún filtro.</p></div>
+    </div></section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-main"><div class="footer-brand"><a class="brand brand-footer" href="index.html"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 56 64"><path d="M31 3c4 12-2 15 6 21 4 3 7-2 7-7 8 7 11 17 9 27-2 12-12 18-25 18S4 55 3 43c-1-10 4-19 13-26-1 8 2 10 5 8 7-5 3-14 10-22Z" fill="currentColor"/></svg></span><span>MIGA</span></a><p>Cada receta es un paso más.</p><div class="socials"><a href="#" aria-label="Instagram">ig</a><a href="#" aria-label="TikTok">tk</a><a href="#" aria-label="YouTube">yt</a></div></div><div class="footer-links"><div><h3>Explora</h3><a href="recetas.html">Recetas</a><a href="cursos.html">Cursos</a><a href="comunidad.html">Comunidad</a><a href="mapa.html">Mapa</a></div><div><h3>MIGA</h3><a href="index.html">Sobre nosotros</a><a href="#">Contacto</a><a href="#">Ayuda</a></div><div><h3>Tu espacio</h3><a href="perfil.html">Perfil</a><a href="#subir" data-open-upload>Subir receta</a><a href="perfil.html">Mis logros</a></div></div></div><div class="container footer-bottom"><span>© 2026 MIGA. Hecho con hambre en Madrid.</span><span>Come rico. Aprende siempre. 🔥</span></div></footer>
+
+  <dialog class="modal recipe-modal" id="recipe-modal" aria-labelledby="modal-recipe-title"><button class="modal-close" type="button" aria-label="Cerrar modal" data-close-modal>×</button><div class="modal-recipe-visual" id="modal-recipe-visual"><div class="modal-food" id="modal-food"></div><span class="modal-category" id="modal-category"></span></div><div class="modal-content"><div class="modal-title-row"><div><span class="section-tag">Receta paso a paso</span><h2 id="modal-recipe-title"></h2></div><button class="favorite-large" id="modal-favorite" type="button" aria-label="Guardar favorito" aria-pressed="false">♡</button></div><p id="modal-description"></p><div class="modal-meta"><span>⏱ <b id="modal-time"></b></span><span>◒ <b id="modal-difficulty"></b></span><span>◆ <b id="modal-points"></b> migas</span></div><div class="modal-columns"><div><h3>Ingredientes</h3><ul id="modal-ingredients"></ul></div><div><h3>Pasos</h3><ol id="modal-steps"></ol></div></div><button class="button button-primary button-full" id="modal-favorite-text" type="button">Guardar en favoritos</button></div></dialog>
+
+  <dialog class="modal upload-modal" id="upload-modal" aria-labelledby="upload-title"><button class="modal-close" type="button" aria-label="Cerrar formulario" data-close-upload>×</button><div class="upload-header"><span class="section-tag">+50 migas por compartir</span><h2 id="upload-title">Sube tu receta</h2><p>No tiene que ser perfecta. Solo tiene que ser tuya.</p></div>
+    <form id="upload-form" class="upload-form">
+      <div class="form-field field-wide"><label for="recipe-title">Título de la receta</label><input id="recipe-title" name="title" type="text" placeholder="Ej. Pasta salvavidas" required maxlength="60"></div>
+      <div class="form-field"><label for="recipe-category">Categoría</label><select id="recipe-category" name="category" required><option value="">Elige una</option><option>Rápidas</option><option>Económicas</option><option>Saludables</option><option>Vegetarianas</option><option>Postres</option><option>Para principiantes</option></select></div>
+      <div class="form-field"><label for="recipe-time">Tiempo</label><div class="input-suffix"><input id="recipe-time" name="time" type="number" min="1" max="300" placeholder="20" required><span>min</span></div></div>
+      <div class="form-field field-wide"><label>Dificultad</label><div class="difficulty-options"><label><input type="radio" name="difficulty" value="Muy fácil" required><span>Muy fácil</span></label><label><input type="radio" name="difficulty" value="Fácil"><span>Fácil</span></label><label><input type="radio" name="difficulty" value="Me apaño"><span>Me apaño</span></label></div></div>
+      <div class="form-field field-wide"><label for="recipe-ingredients">Ingredientes</label><textarea id="recipe-ingredients" name="ingredients" rows="4" placeholder="Uno por línea:&#10;200 g de pasta&#10;1 huevo&#10;Queso rallado" required></textarea></div>
+      <div class="form-field field-wide"><label for="recipe-steps">Pasos</label><textarea id="recipe-steps" name="steps" rows="5" placeholder="Uno por línea. Cuéntalo de forma sencilla." required></textarea></div>
+      <div class="form-field field-wide"><label for="recipe-image">Foto <span>(opcional)</span></label><label class="file-drop" for="recipe-image"><input id="recipe-image" name="image" type="file" accept="image/*"><span class="file-icon">📷</span><span><strong>Añade una foto</strong><small>PNG o JPG, máximo 5 MB</small></span><b>Elegir archivo</b></label></div>
+      <button class="button button-primary button-large button-full field-wide" type="submit">Publicar receta y ganar 50 migas</button>
+    </form>
+  </dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"><span class="toast-icon">✓</span><div><strong id="toast-title">¡Hecho!</strong><span id="toast-message"></span></div></div>
+  <script src="script.js"></script>
+</body>
+</html>
