@@ -557,6 +557,22 @@ function setupCommunity() {
     event.currentTarget.disabled = true;
     showToast("Te has unido al reto", "Tienes hasta el domingo para compartir tu receta.");
   });
+  const chatForm = $("#chat-form");
+  if (chatForm) {
+    chatForm.addEventListener("submit", event => {
+      event.preventDefault();
+      const input = $("#chat-input");
+      const text = input.value.trim();
+      if (!text) { input.focus(); return; }
+      const message = document.createElement("div");
+      message.className = "chat-message is-own";
+      message.innerHTML = `<p><strong>Laura</strong> ${escapeHTML(text)}</p><div class="user-avatar avatar-la">LA</div>`;
+      $("#chat-thread").append(message);
+      $("#chat-thread").scrollTop = $("#chat-thread").scrollHeight;
+      input.value = "";
+      showToast("Mensaje enviado", "Tu mensaje aparece en el chat de comunidad.");
+    });
+  }
 }
 
 function setupCourses() {
